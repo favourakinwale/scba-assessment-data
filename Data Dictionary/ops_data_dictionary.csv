@@ -1,0 +1,12 @@
+﻿Column,Type,Description
+date,String (date),Calendar date of the metric in YYYY-MM-DD format.
+channel,String,"Support channel for which metrics are reported (e.g. Phone, Chat, Email, Web Form, Community)."
+offered_contacts,Integer,Count of contacts offered to the channel on that date (includes answered and abandoned contacts).
+answered_contacts,Integer,Count of contacts answered/handled by agents in the channel on that date.
+abandoned_contacts,Integer,Count of contacts that were abandoned before being answered; typically offered_contacts - answered_contacts.
+avg_aht_seconds,Integer (seconds),"Average handle time for answered contacts in the channel on that date, measured in seconds."
+avg_asa_seconds,Integer (seconds),"Average speed of answer for the channel on that date, measured in seconds (time from contact initiation to agent answer)."
+fcr_rate_pct,Float (percentage),"First Contact Resolution rate for the channel on that date, expressed as a percentage (0–100)."
+occupancy_pct,Float (percentage),"Agent occupancy for the channel on that date, expressed as a percentage (0–100)."
+staffing_hours,Float (hours),"Estimated staffing hours consumed by the channel on that date, based on handled volume, AHT, and occupancy."
+labor_cost_usd,Float (currency),"Estimated labor cost in USD for the channel on that date, derived from staffing hours and assumed hourly cost."

@@ -1,0 +1,11 @@
+﻿Column,Type,Description
+feedback_id,String,Unique feedback identifier (e.g. FB000123).
+feedback_date,String (date),Date the feedback was captured in YYYY-MM-DD format.
+source,String,"Source channel of the feedback (e.g. Post-Contact Survey, In-App Survey, App Store Review, Play Store Review, Retailer Review, Community, Social)."
+product_area,String,Product or experience area referenced by the feedback.
+product_name,String,Specific Jonly product mentioned or associated with the feedback.
+rating_score,Integer (1–5),"Rating score given by the customer in the feedback (1 = very dissatisfied, 5 = very satisfied)."
+sentiment_score,Float (-1 to 1),"Derived sentiment score for the feedback text or interaction, normalized approximately between -1 (very negative) and 1 (very positive)."
+nps_score,Integer or NULL,"Net Promoter Score value (0, 3, 5, 7, 9, 10) for survey-style sources; may be NULL for reviews or non-NPS channels."
+linked_case_id,String or NULL,Foreign key referencing contact_cases.case_id when the feedback is tied to a specific support case; NULL when not linked.
+verbatim_text,String,"Free-text feedback left by the customer, often referencing the Jonly brand, specific products, and product areas."

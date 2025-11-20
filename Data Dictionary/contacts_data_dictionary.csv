@@ -1,0 +1,20 @@
+﻿Column,Type,Description
+case_number,Integer,Numeric case number
+case_id,String,Case identifier Unique per case.
+customer_id,String,Pseudonymous customer identifier. A customer can have multiple cases.
+created_at,String (ISO datetime),Case creation timestamp in ISO format.
+region,String,Geographical region of the customer or support site.
+country,String (code),Country code associated with the case.
+language,String,Primary language used in the case.
+channel,String,Contact channel used by the customer.
+case_subtype,String,High-level case category or reason.
+symptom_summary,String,Short description of the specific issue or symptom.
+product_name,String,Jonly product involved in the case.
+platform,String,Platform used by the customer.
+support_tier,String,Support level or queue that handled the case.
+case_status,String,Current status of the case.
+handle_time_seconds,Integer (seconds),Total handle time for the case in seconds. Includes active handling time; generally between 180 and 3600 seconds.
+transfers,Integer,"Number of transfers during the case (hand-offs between agents, tiers, or queues). Higher values indicate more friction."
+resolved_flag,Integer (0/1),"Resolution indicator (1 = resolved, 0 = unresolved) based on case outcome."
+csat_score,Integer (1–5),"Customer satisfaction score for the case on a 1–5 scale, where 1 is very dissatisfied and 5 is very satisfied."
+sentiment_score,Float (-1 to 1),"Derived sentiment score associated with the case interaction, normalized approximately between -1 (very negative) and 1 (very positive)."
